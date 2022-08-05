@@ -8,6 +8,8 @@
     --grisclaro: #dfe9f3;
     --carta: #e3ebf3;
     --carta_sombra: #e8eef4;
+    --luz: https://cdn.pixabay.com/photo/2015/11/01/15/38/the-background-1017060_960_720.jpg;
+    --noche: https://img.freepik.com/premium-vector/carbon-fiber-texture-background_107708-13.jpg;
 }
 /** Globales **/
 html {
@@ -22,13 +24,18 @@ html {
 }
 
 body {
+    position: relative;
+    padding-bottom: 5.5em;
+    min-height: 100vh;
     margin: 0;
     font-size: 16px;
     font-family: var(--fuentePrincipal), sans-serif;
     background: linear-gradient(0deg, var(--grisclaro) 0%, var(--blanco) 100%)
         no-repeat;
 }
-
+p{
+    text-align: center;
+}
 /** Tipografia**/
 h1 {
     font-size: 3.8rem;
@@ -78,8 +85,11 @@ h3 {
 
     box-shadow: 0 0 1rem 1px var(--primario);
 }
+.navegacion-principal a{
+    transition: ease 0.3s;
+}
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .header {
         display: flex;
         flex-direction: column;
@@ -91,6 +101,9 @@ h3 {
         display: block;
         padding: 1rem;
     }
+    footer{
+        background-color: var(--secundario);
+    }
 }
 
 /* Slidder */
@@ -101,7 +114,7 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 900px) {
     .grid {
         margin: 3rem auto;
         max-width: 60%;
@@ -113,6 +126,7 @@ h3 {
     padding: 1rem;
     background-color: var(--carta);
     box-shadow: 0 0 1px var(--secundario);
+    transition: ease 0.1s;
     border-radius: 1rem;
 }
 .producto:hover {
@@ -129,8 +143,10 @@ h3 {
 }
 .producto__nombre,
 .producto__texto {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Arial Narrow', Arial,'Franklin Gothic Medium', sans-serif;
     text-transform: uppercase;
+    line-height: 1.3;
+    text-align: center;
     color: var(--primario);
 
     margin: 1rem;
@@ -146,8 +162,38 @@ h3 {
 /* .soon {
     height: 170px;
 } 
+/* sobre mi */
+.about__{
+    margin: 1em ;
+}
 /* footer */
+footer{
+    padding: 0.5em 0;
+    text-align: center;
+    position: fixed;
+    bottom:0;
+    background: var(--secundario);
+    width: 100%;
+    color: var(--blanco);
+}
+@media (min-width: 900px) {
+    footer{
+        background-color: var(--primario);
+    }
+}
+
 .mucho {
     padding: 0 1rem;
     font-size: 2rem;
-}
+ }
+ 
+.tema{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 4em;
+    width: 300px;
+    height: 20px;
+    background: url(https://img.freepik.com/premium-vector/carbon-fiber-texture-background_107708-13.jpg);
+    background: rgba(106, 102, 163, 0.4);
+    clip-path: polygon(0 0, 93% 0, 100% 100%, 0 100%);
+} 
