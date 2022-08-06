@@ -25,7 +25,7 @@ html {
 
 body {
     position: relative;
-    padding-bottom: 5.5em;
+    padding-bottom: 4em;
     min-height: 100vh;
     margin: 0;
     font-size: 16px;
@@ -35,7 +35,7 @@ body {
 }
 p{
     text-align: center;
-}
+    }
 /** Tipografia**/
 h1 {
     font-size: 3.8rem;
@@ -122,6 +122,16 @@ h3 {
         gap: 2rem;
     }
 }
+@media (max-width: 768px) {
+    .grid {
+        margin: 3rem auto;
+        max-width: 60%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
 .producto {
     padding: 1rem;
     background-color: var(--carta);
@@ -157,6 +167,7 @@ h3 {
     font-weight: bold;
 }
 .producto__texto {
+    letter-spacing: -2px;
     margin-bottom: 0px;
 }
 /* .soon {
