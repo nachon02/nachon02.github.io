@@ -100,10 +100,18 @@ h3 {
     .navegacion-principal a {
         display: block;
         padding: 1rem;
+        width: 100vw;
     }
     footer{
         background-color: var(--secundario);
     }
+    .navegacion-principal a:hover {
+    background-color: var(--blanco);
+    color: var(--secundario);
+
+    box-shadow: 0 0 1rem 1px var(--secundario);
+}
+    
 }
 
 /* Slidder */
@@ -145,6 +153,7 @@ h3 {
 .producto__imagen {
     width: 100%;
     box-shadow: 0 0 1px var(--secundario);
+    aspect-ratio: 2 / 1;
 
     border-radius: 1rem;
 }
@@ -154,20 +163,31 @@ h3 {
 .producto__nombre,
 .producto__texto {
     font-family: 'Arial Narrow', Arial,'Franklin Gothic Medium', sans-serif;
-    line-height: 1.5;
+    line-height: 1.2;
     text-align: center;
     color: var(--primario);
-
-    margin: 1rem;
+    /* margin: 1rem; */
 }
 .producto__nombre {
+    padding: .5rem 0;
     font-size: 2rem;
+    color: var(--carta);
+    margin: 0 -10px;
+    text-transform: uppercase;
     text-align: center;
     font-weight: bold;
 }
+.producto__informacion{
+    background-color: var(--primario);
+    /* border-radius: 1rem; */
+    margin: 0 -1rem;
+}
 .producto__texto {
-    letter-spacing: -1px;
-    margin-bottom: 0px;
+    letter-spacing: px;
+    margin: 0px;
+    background-color: var(--carta);
+    color: var(--secundario);
+    padding: 1rem;
 }
 /* .soon {
     height: 170px;
