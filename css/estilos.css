@@ -1,6 +1,6 @@
 :root {
     --primario: #3c7ea3;
-    --secundario: #3d4950;
+    --secundario: #4695c2;
     --blanco: #fffbf4;
     --negro: #000;
     --gris: #757575;
@@ -208,6 +208,9 @@ h3 {
     border: none;
     background: var(--primario);
     transition: all 0.3s ease;
+}
+.btn:hover{
+    transform: scale(1.2);
 }
 /* footer */
 footer{
