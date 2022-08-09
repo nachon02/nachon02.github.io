@@ -1,16 +1,17 @@
 :root {
-    --primario: #3c7ea3;
-    --secundario: #4695c2;
+    --azul: #3c7ea3;
+    --azulclaro: #4695c2;
     --blanco: #fffbf4;
     --negro: #000;
+    --tema: #4695c240;
     --gris: #757575;
     --fuentePrincipal: "Staatliches", cursive;
     --grisclaro: #dfe9f3;
     --carta: #e3ebf3;
     --carta_sombra: #e8eef4;
-    --luz: https://cdn.pixabay.com/photo/2015/11/01/15/38/the-background-1017060_960_720.jpg;
-    --noche: https://img.freepik.com/premium-vector/carbon-fiber-texture-background_107708-13.jpg;
+
 }
+
 /** Globales **/
 html {
     box-sizing: border-box;
@@ -24,105 +25,212 @@ html {
 }
 
 body {
+    overflow-x: hidden;
     position: relative;
     padding-bottom: 4em;
     min-height: 100vh;
     margin: 0;
     font-size: 16px;
     font-family: var(--fuentePrincipal), sans-serif;
-    background: linear-gradient(0deg, var(--grisclaro) 0%, var(--blanco) 100%)
-        no-repeat;
+    background: linear-gradient(0deg, var(--grisclaro) 0%, var(--blanco) 100%) no-repeat;
 }
-p{
+
+p {
     text-align: center;
-    }
+}
+
 /** Tipografia**/
 h1 {
     font-size: 3.8rem;
 }
+
 h2 {
     font-size: 2.8rem;
 }
+
 h3 {
     font-size: 1.8rem;
 }
+
 /** Utilidades */
 .center {
     text-align: center;
 }
+
 .titulo {
     font-size: 3.8rem;
-    color: var(--primario);
-}
-/** Navegacion-principal */
-.logo {
-    display: flex;
-    align-items: center;
-    height: 6.5rem;
-}
-.logo img {
-    height: 5rem;
-    margin-right: 1rem;
+    color: var(--azul);
 }
 
+/** Header  */
+
 .header a {
-    color: var(--blanco);
+    color: var(--azul);
     text-decoration: none;
     text-align: center;
     font-size: 2rem;
     padding: 2rem;
+    margin: 0 -2px;
+    transition: ease 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0);
 }
+
 .header {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    background-color: var(--primario);
+    flex-direction: column;
+    background-color: var(--blanco);
+    /* box-shadow:  var(--azulclaro); */
+    box-shadow: 0px 5px 10px 0px var(--azulclaro);
     justify-content: space-between;
     align-items: center;
-}
-.navegacion-principal a:hover {
-    background-color: var(--blanco);
-    color: var(--secundario);
-
-    box-shadow: 0 0 1rem 1px var(--primario);
-}
-.navegacion-principal a{
-    transition: ease 0.3s;
 }
 
 @media (max-width: 900px) {
     .header {
         display: flex;
         flex-direction: column;
-        background-color: var(--secundario);
-        align-items: center;
+        background-color: var(--azulclaro);
+        align-items: initial;
         min-height: 70px;
     }
-    .navegacion-principal a {
-        display: block;
-        padding: 1rem;
-        width: 100vw;
-    }
-    footer{
-        background-color: var(--secundario);
-    }
-    .navegacion-principal a:hover {
-    background-color: var(--blanco);
-    color: var(--secundario);
 
-    box-shadow: 0 0 1rem 1px var(--secundario);
+    .header a {
+        color: var(--blanco);
+    }
 }
-    
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 6.5rem;
 }
+
+.logo img {
+    height: 5rem;
+    margin-right: 1rem;
+}
+
+.nav-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-right: 10rem;
+    max-width: 400px;
+    height: 100vh;
+    background-color: var(--blanco);
+    display: none;
+    border-right: 2px solid var(--azul);
+}
+
+.nav-container__active {
+    display: block;
+}
+
+/* Fin header */
+
+/** Boton hamburguesa */
+.bars__menu {
+    width: 40px;
+    height: 32px;
+    position: fixed;
+    /* top: 50%;
+    left: 05%; */
+    top: 35px;
+    left: 35px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+}
+
+.bars__menu span {
+    display: block;
+    align-items: center;
+    width: 30px;
+    height: 2px;
+    border-radius: 4px;
+    background-color: var(--azulclaro);
+    margin: 0 auto;
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    transition: all 0.3s;
+}
+
+.activeline1__bars-menu {
+    transform: rotate(45deg) translate(-2px, 1px);
+
+
+}
+
+.activeline2__bars-menu {
+    opacity: 0;
+    margin-left: -70px;
+
+}
+
+.activeline3__bars-menu {
+    transform: rotate(-45deg) translate(-4px, 2px);
+
+}
+
+@media (max-width: 900px) {
+    .bars__menu {
+        left: 90%;
+    }
+
+    .bars__menu span {
+        background-color: var(--blanco);
+        z-index: 1;
+    }
+}
+
+
+
+/* Fin boton hamburguesa */
+/** Navegacion-principal */
+
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6.5rem;
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--blanco);
+    color: var(--azulclaro);
+    border: 1px solid var(--azul);
+}
+
+@media (max-width: 900px) {
+    .navegacion-principal a {
+        color: var(--azulclaro);
+        padding: 1rem;
+    }
+
+    .navegacion-principal a:hover {
+        background-color: var(--blanco);
+        color: var(--azulclaro);
+
+        box-shadow: 0 0 1rem 1px var(--azulclaro);
+    }
+
+}
+
+/* *Fin navegacion principal */
+/* * Main */
 
 /* Slidder */
 /* grid */
 .grid {
     max-width: 100%;
-    margin: 1rem;
+    margin: 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
+
 @media (min-width: 900px) {
     .grid {
         margin: 5rem auto;
@@ -131,10 +239,11 @@ h3 {
         gap: 2rem;
     }
 }
+
 @media (max-width: 768px) {
     .grid {
         margin: 3rem auto;
-        max-width: 60%;
+        max-width: 90%;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, 1fr);
         gap: 2rem;
@@ -144,32 +253,37 @@ h3 {
 .producto {
     padding: 1rem;
     background-color: var(--carta);
-    box-shadow: 0 0 1px var(--secundario);
+    box-shadow: 0 0 1px var(--azulclaro);
     transition: ease-out 0.1s;
     border-radius: 1rem;
 }
+
 .producto:hover {
-    box-shadow: 0 0 2rem 3px var(--primario);
+    box-shadow: 0 0 2rem 3px var(--azul);
     /* transform: scale(1.05); */
 }
+
 .producto__imagen {
     width: 100%;
-    box-shadow: 0 0 1px var(--secundario);
+    box-shadow: 0 0 1px var(--azulclaro);
     aspect-ratio: 2 / 1;
 
     border-radius: 1rem;
 }
+
 .producto a {
     text-decoration: none;
 }
+
 .producto__nombre,
 .producto__texto {
-    font-family: 'Arial Narrow', Arial,'Franklin Gothic Medium', sans-serif;
+    font-family: 'Arial Narrow', Arial, 'Franklin Gothic Medium', sans-serif;
     line-height: 1.2;
     text-align: center;
-    color: var(--primario);
+    color: var(--azul);
     /* margin: 1rem; */
 }
+
 .producto__nombre {
     padding: .5rem 0;
     font-size: 2rem;
@@ -179,24 +293,27 @@ h3 {
     text-align: center;
     font-weight: bold;
 }
-.producto__informacion{
-    background-color: var(--primario);
+
+.producto__informacion {
+    background-color: var(--azul);
     /* border-radius: 1rem; */
     margin: 0 -1rem;
 }
+
 .producto__texto {
     margin: 0px;
     background-color: var(--carta);
-    color: var(--secundario);
+    color: var(--azulclaro);
     padding: 1rem;
 }
-/* .soon {
-    height: 170px;
-} 
+
+/* *fin grid */
+
 /* sobre mi */
-.about__{
-    margin: 1em ;
+.about__ {
+    margin: 1em;
 }
+
 .btn {
     font-size: 16px;
     font-weight: 500;
@@ -207,40 +324,37 @@ h3 {
     display: inline-block;
     white-space: nowrap;
     border: none;
-    background: var(--primario);
+    background: var(--azul);
     transition: all 0.3s ease;
 }
-.btn:hover{
+
+.btn:hover {
     transform: scale(1.2);
 }
+
 /* footer */
-footer{
+footer {
     padding: 0.5em 0;
     text-align: center;
     position: fixed;
-    bottom:0;
-    background: var(--secundario);
+    bottom: 0;
+    background: var(--azulclaro);
     width: 100%;
     color: var(--blanco);
-}
-@media (min-width: 900px) {
-    footer{
-        background-color: var(--primario);
-    }
 }
 
 .mucho {
     padding: 0 1rem;
     font-size: 2rem;
- }
- 
-.tema{
+}
+
+.tema {
     position: fixed;
     bottom: 0;
     margin-bottom: 4em;
     width: 300px;
     height: 20px;
     background: url(https://img.freepik.com/premium-vector/carbon-fiber-texture-background_107708-13.jpg);
-    background: rgba(106, 102, 163, 0.4);
+    background: var(--tema);
     clip-path: polygon(0 0, 93% 0, 100% 100%, 0 100%);
-} 
+}
