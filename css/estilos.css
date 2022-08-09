@@ -117,6 +117,7 @@ h3 {
 /* Slidder */
 /* grid */
 .grid {
+    max-width: 100%;
     margin: 1rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -124,9 +125,9 @@ h3 {
 }
 @media (min-width: 900px) {
     .grid {
-        margin: 3rem auto;
+        margin: 5rem auto;
         max-width: 60%;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 2rem;
     }
 }
@@ -144,11 +145,12 @@ h3 {
     padding: 1rem;
     background-color: var(--carta);
     box-shadow: 0 0 1px var(--secundario);
-    transition: ease 0.1s;
+    transition: ease-out 0.1s;
     border-radius: 1rem;
 }
 .producto:hover {
     box-shadow: 0 0 2rem 3px var(--primario);
+    /* transform: scale(1.05); */
 }
 .producto__imagen {
     width: 100%;
@@ -183,7 +185,6 @@ h3 {
     margin: 0 -1rem;
 }
 .producto__texto {
-    letter-spacing: px;
     margin: 0px;
     background-color: var(--carta);
     color: var(--secundario);
