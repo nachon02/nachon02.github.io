@@ -28,12 +28,8 @@ function ScrollProgressBar() {
 
     let windowHeight = scrollHeight - clientHeight;
     let porcentaje = (scrollTop / windowHeight) * 100;
-    // console.log(porcentaje);
-    progressbar.style.width = porcentaje + "%";
-
-    let subir = document.querySelector(".goup");
-    if (true) {
-        subir.classList.toggle(".goupshow");
-    }
+    let progress = porcentaje + porcentaje * 0.01;
+    // console.log(progress);
+    progressbar.style.width = progress + "%";
 }
 window.addEventListener("scroll", ScrollProgressBar);

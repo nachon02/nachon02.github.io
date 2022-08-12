@@ -73,6 +73,7 @@ h3 {
     color: var(--azulclaro);
     text-decoration: none;
     text-align: center;
+    /* width: 200px; */
     font-size: 2rem;
     padding: 2rem;
     margin: 0 -2px;
@@ -197,7 +198,7 @@ h3 {
 
 @media (max-width: 900px) {
     .bars__menu {
-        left: 90%;
+        left: 95%;
     }
 
     .bars__menu span {
@@ -262,6 +263,10 @@ h3 {
 
 /* *Fin navegacion principal */
 /* * Main */
+
+main {
+    margin-top: 7rem;
+}
 
 /* Slidder */
 /* grid */
@@ -330,7 +335,7 @@ h3 {
     padding: .5rem 0;
     font-size: 2rem;
     color: var(--carta);
-    margin: 0 -10px;
+    margin: 0;
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
@@ -389,7 +394,7 @@ footer {
     display: block;
     position: absolute;
     right: 30px;
-    bottom: 13px;
+    bottom: 73px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
