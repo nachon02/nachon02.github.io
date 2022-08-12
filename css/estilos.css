@@ -101,7 +101,7 @@ h3 {
 }
 
 .progressbar {
-    width: 100%;
+    width: 0%;
     height: inherit;
     background-color: var(--azulclaro);
 }
@@ -214,7 +214,13 @@ h3 {
 .navegacion-principal {
     display: flex;
     flex-direction: column;
-    margin-top: 6.5rem;
+}
+
+.navegacion-principal .logo {
+    padding: 2rem;
+    background-color: var(--blanco);
+    color: var(--azulclaro);
+    border: 1px solid var(--azul);
 }
 
 .navegacion-principal a:hover {
@@ -371,12 +377,12 @@ footer {
     display: block;
     position: absolute;
     right: 30px;
-    bottom: 10px;
-    width: 50px;
-    height: 50px;
+    bottom: 13px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: black;
-    padding-top: 4px;
+
 
 }
 
