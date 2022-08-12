@@ -212,15 +212,13 @@ h3 {
 /** Navegacion-principal */
 
 .navegacion-principal {
+    margin-top: 6.5rem;
     display: flex;
     flex-direction: column;
 }
 
 .navegacion-principal .logo {
-    padding: 2rem;
-    background-color: var(--blanco);
-    color: var(--azulclaro);
-    border: 1px solid var(--azul);
+    display: none;
 }
 
 .navegacion-principal a:hover {
@@ -232,7 +230,8 @@ h3 {
 @media (max-width: 900px) {
     .navegacion-principal a {
         color: var(--azulclaro);
-        padding: 1rem;
+        text-align: initial;
+        /* padding: 1rem; */
     }
 
     .navegacion-principal a:hover {
@@ -241,6 +240,19 @@ h3 {
 
         box-shadow: 0 0 1rem 1px var(--azulclaro);
     }
+
+    .navegacion-principal .logo {
+        display: inline-flex;
+        padding: 2rem;
+        background-color: var(--blanco);
+        color: var(--azulclaro);
+        border: 1px solid var(--azul);
+    }
+
+    .navegacion-principal {
+        margin-top: 0;
+    }
+
 
 }
 
