@@ -1,14 +1,17 @@
 :root {
-    --azul: #3c7ea3;
-    --azulclaro: #4695c2;
-    --blanco: #fffbf4;
+    --azul: #C8B6E2;
+    --azulclaro: #495C83;
+    --texto-primario: ;
+    --texto: ;
+    --blanco: #F9F5EB;
     --negro: #000;
     --tema: #4695c240;
     --gris: #757575;
     --fuentePrincipal: "Staatliches", cursive;
-    --grisclaro: #dfe9f3;
+    --grisclaro: #EAE3D2;
     --carta: #e3ebf3;
     --carta_sombra: #e8eef4;
+
 
 }
 
@@ -62,10 +65,12 @@ h3 {
     color: var(--azul);
 }
 
+
+
 /** Header  */
 
 .header a {
-    color: var(--azul);
+    color: var(--azulclaro);
     text-decoration: none;
     text-align: center;
     font-size: 2rem;
@@ -76,14 +81,29 @@ h3 {
 }
 
 .header {
-    position: relative;
+    position: fixed;
+    width: 100%;
+    top: 0;
     display: flex;
     flex-direction: column;
     background-color: var(--blanco);
     /* box-shadow:  var(--azulclaro); */
-    box-shadow: 0px 5px 10px 0px var(--azulclaro);
+    /* box-shadow: 0px 5px 10px 0px var(--azulclaro); */
     justify-content: space-between;
     align-items: center;
+}
+
+/**Progress-bar */
+.container-progressbar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--blanco);
+}
+
+.progressbar {
+    width: 100%;
+    height: inherit;
+    background-color: var(--azulclaro);
 }
 
 @media (max-width: 900px) {
@@ -218,6 +238,10 @@ h3 {
 
 }
 
+.navegacion-principal a {
+    color: var(--azul);
+}
+
 /* *Fin navegacion principal */
 /* * Main */
 
@@ -338,9 +362,26 @@ footer {
     text-align: center;
     position: fixed;
     bottom: 0;
-    background: var(--azulclaro);
+    background: #C8B6E2;
     width: 100%;
-    color: var(--blanco);
+    color: var(--azulclaro);
+}
+
+.subir {
+    display: block;
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    padding-top: 4px;
+
+}
+
+.subir svg {
+    width: 70%;
 }
 
 .mucho {
