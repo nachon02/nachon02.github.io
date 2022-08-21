@@ -14,6 +14,8 @@
         />
         <link rel="preconnect" href="css/normalize.css" />
         <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
         <script src="js/script.js" defer></script>
         <title>Portfolio</title>
     </head>
@@ -21,29 +23,87 @@
         <header class="header">
             <a class="logo" id="" href="#">
                 <img src="img/logo.png" alt="logo" />
-                <h2 class="nombre-empresa">Juan Netto</h2>
+                <h2 class="nombre">Juan Netto</h2>
             </a>
-            <div class="nav-c">
+            <div class="container-progressbar">
+                <div class="progressbar"></div>
+            </div>
+            <div class="nav-container">
                 <nav class="navegacion-principal">
+                    <a class="logo" id="" href="#">
+                        <img src="img/logo.png" alt="logo" />
+                        <h2 class="nombre">Juan Netto</h2>
+                    </a>
                     <a href="index.html">Inicio</a>
                     <a href="proyectos.html">Proyectos</a>
                     <a href="contacto.html">Contacto</a>
                 </nav>
             </div>
+            <div class="bars__menu">
+                <span class="line1__bars-menu"></span>
+                <span class="line2__bars-menu"></span>
+                <span class="line3__bars-menu"></span>
+            </div>
         </header>
-        <!-- 
-        <p id="parrafo"></p>
-        <input type="text" name="" id="input1" />
-        <button id="button1">Ver texto</button>
- -->
         <main>
-            <div class="slider"></div>
-        </main>
-        <div class="tema">
+            <section>
+                <h1 class="h1_sobremi">Contacto</h1>
 
-        </div>
+                <form class="formulario" action="">
+                    <fieldset>
+                        <legend>Contactanos llenando todos los campos</legend>
+
+                        <div class="contenedor-campos">
+                            <div class="campo">
+                                <label for="">Nombre</label>
+                                <input class="input-text" type="text" placeholder="Ingrese su nombre">
+                            </div>
+
+                            <div class="campo">
+                                <label for="">Telefono</label>
+                                <input class="input-text" type="tel" placeholder="Ingrese su telefono">
+                            </div>
+
+                            <div class="campo stop">
+                                <label for="">Correo</label>
+                                <input class="input-text" type="email" placeholder="Ingrese su email">
+                            </div>
+
+                            <div class="campo">
+                                <label for="">Mensaje</label>
+                                <textarea class="input-text"></textarea>
+                            </div>
+                        </div>
+                        <!-- .contenedor-campos -->
+
+                        <div class="flex derecha">
+                            <input class="boton w-sm-100" type="submit" value="Enviar">
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
         <footer>
             <p>Todos los derechos reservados. Juan Netto</p>
+            <div class="subir">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-arrow-up"
+                    width="44"
+                    height="44"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#C8B6E2"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="18" y1="11" x2="12" y2="5" />
+                    <line x1="6" y1="11" x2="12" y2="5" />
+                </svg>
+            </div>
         </footer>
     </body>
 </html>
