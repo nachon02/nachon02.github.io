@@ -30,12 +30,19 @@ html {
 body {
     overflow-x: hidden;
     position: relative;
-    padding-bottom: 4em;
+    /* padding-bottom: 4em; */
     min-height: 100vh;
     margin: 0;
     font-size: 16px;
     font-family: var(--fuentePrincipal), sans-serif;
-    background: linear-gradient(0deg, var(--grisclaro) 0%, var(--blanco) 100%) no-repeat;
+    /* background: linear-gradient(0deg, var(--grisclaro) 0%, var(--blanco) 100%) no-repeat; */
+    background-color: #F9F5EB;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23f5e5e0' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23f1d5db' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23eccae1' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23e2c0e7' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23C8B6E2' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+}
+html{
+    scroll-behavior: smooth;
 }
 
 p {
@@ -439,7 +446,7 @@ main {
 footer {
     padding: 0.5em 0;
     text-align: center;
-    position: fixed;
+/* position: fixed; */
     bottom: 0;
     background: #C8B6E2;
     width: 100%;
@@ -448,24 +455,33 @@ footer {
 
 .subir {
     display: block;
-    position: absolute;
-    right: 30px;
-    bottom: 73px;
-    width: 40px;
-    height: 40px;
+    position: fixed;
+    visibility: hidden;
+    
+    width: 45px;
+    height: 45px;
+    bottom: 2rem;
+    bottom: 2rem;
+    right: 2rem;
+    /* margin-right: 85vw; */
+    z-index: 99;
     border-radius: 50%;
+    cursor: pointer;
     background-color: black;
+    /* transition: all ease-in; */
 
 
 }
+
 
 .subir svg {
+    position: absolute;
+    margin: auto;
     width: 70%;
-}
-
-.mucho {
-    padding: 0 1rem;
-    font-size: 2rem;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 .tema {

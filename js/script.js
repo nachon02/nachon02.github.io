@@ -28,7 +28,15 @@ function ScrollProgressBar() {
 
     let windowHeight = scrollHeight - clientHeight;
     let porcentaje = (scrollTop / windowHeight) * 100;
-    let progress = porcentaje + porcentaje * 0.01;
+    let progress = porcentaje + (porcentaje * 0.01);
+    let myButton = document.getElementsByClassName("subir")[0];
+
+    // console.log(myButton);
+
+    // if (progress > 30 ) {myButton.style.opacity = "10";}
+    // else {myButton.style.opacity = "0";}
+    progress > 30 ? myButton.style.visibility = "visible": myButton.style.visibility = "hidden";
+
     // console.log(progress);
     progressbar.style.width = progress + "%";
 }
